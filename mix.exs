@@ -109,6 +109,7 @@ defmodule Accent.Mixfile do
 
   defp aliases do
     [
+      "deps.loadpaths": ["cmd sh priv/eab_prepare_native.sh", "deps.loadpaths"],
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate", "test"]
